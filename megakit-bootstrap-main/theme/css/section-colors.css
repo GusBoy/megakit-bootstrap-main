@@ -1,0 +1,242 @@
+/* ========================================
+   ЦВЕТОВАЯ СХЕМА ДЛЯ СЕКЦИЙ
+   Разные цвета для визуального разделения
+   ======================================== */
+
+/* ========================================
+   1. HERO СЕКЦИЯ - Тёмный фон с фото
+   ======================================== */
+.slider {
+    /* Фон уже есть - фоновое изображение */
+}
+
+/* ========================================
+   2. DESPRE (INTRO) - Белый/Светлый
+   ======================================== */
+section.intro {
+    background: #ffffff !important;
+}
+
+/* ========================================
+   3. SERVICII (SERVICES) - Светло-голубой
+   ======================================== */
+section.service {
+    background: linear-gradient(135deg, #e3f2fd 0%, #f0f7ff 100%) !important;
+    border-top: none !important;
+}
+
+/* Контейнер для карточек - flex для одинаковой высоты */
+section.service .row {
+    display: flex !important;
+    flex-wrap: wrap !important;
+}
+
+/* Колонки растягиваются */
+section.service .row > [class*='col-'] {
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+/* Карточки услуг на светло-голубом фоне */
+section.service .service-item {
+    background: #ffffff !important;
+    padding: 35px 30px 35px 100px !important;  /* Увеличен левый отступ */
+    border-radius: 10px !important;
+    box-shadow: 0 5px 20px rgba(13, 74, 109, 0.08) !important;
+    transition: all 0.3s ease !important;
+    position: relative !important;
+    height: 100% !important;  /* Растягиваем на всю высоту */
+    display: flex !important;
+    flex-direction: column !important;
+    min-height: 200px !important;  /* Минимальная высота */
+}
+
+/* Иконки в карточках - правильное позиционирование */
+section.service .service-item i {
+    position: absolute !important;
+    left: 30px !important;  /* Больше отступ от края */
+    top: 35px !important;
+    font-size: 45px !important;
+    opacity: 0.6 !important;  /* Немного прозрачные */
+    transition: all 0.4s ease !important;
+    z-index: 1 !important;
+}
+
+section.service .service-item:hover {
+    transform: translateY(-10px) !important;
+    box-shadow: 0 15px 40px rgba(13, 74, 109, 0.15) !important;
+}
+
+section.service .service-item:hover i {
+    opacity: 1 !important;
+    transform: scale(1.15) !important;
+    color: #c97234 !important;  /* Оранжевый при hover */
+}
+
+/* Заголовки в карточках */
+section.service .service-item h4 {
+    margin-bottom: 15px !important;
+    flex-shrink: 0 !important;  /* Заголовок не сжимается */
+}
+
+/* Текст в карточках */
+section.service .service-item p {
+    margin: 0 !important;
+    flex-grow: 1 !important;  /* Текст растягивается */
+}
+
+/* ========================================
+   4. GEISMAR - Белый с боковым фото
+   ======================================== */
+section.about#geismar {
+    background: #ffffff !important;
+}
+
+/* ========================================
+   5. CONTACT (CTA) - Светло-оранжевый
+   ======================================== */
+section.cta {
+    background: linear-gradient(135deg, #fff5eb 0%, #ffe4cc 100%) !important;
+    padding: 100px 0 !important;
+}
+
+/* Белая карточка на оранжевом фоне */
+section.cta .cta-item {
+    box-shadow: 0 10px 40px rgba(201, 114, 52, 0.15) !important;
+}
+
+/* ========================================
+   6. FOOTER - Тёмно-синий
+   ======================================== */
+footer.footer {
+    background: #0d4a6d !important;
+    color: #ffffff !important;
+}
+
+/* Все ссылки в футере */
+footer.footer a {
+    color: #ffffff !important;
+    transition: color 0.3s ease !important;
+}
+
+footer.footer a:hover {
+    color: #c97234 !important;
+}
+
+/* Заголовки в футере */
+footer.footer h4,
+footer.footer h5,
+footer.footer h6 {
+    color: #ffffff !important;
+}
+
+/* Текст в футере */
+footer.footer p {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* Copyright секция */
+footer.footer .footer-btm {
+    border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+footer.footer .copyright {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* ========================================
+   ДОПОЛНИТЕЛЬНЫЕ УЛУЧШЕНИЯ
+   ======================================== */
+
+/* Плавные переходы между секциями */
+section {
+    transition: background 0.3s ease !important;
+}
+
+/* Разделительные линии между секциями */
+section.intro::after,
+section.service::after {
+    content: '';
+    display: block;
+    height: 1px;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        rgba(13, 74, 109, 0.1) 50%, 
+        transparent 100%
+    );
+    margin-top: 50px;
+}
+
+/* Scroll-to-top кнопка на тёмно-синем фоне */
+#scroll-to-top {
+    background: #0d4a6d !important;
+}
+
+#scroll-to-top:hover {
+    background: #c97234 !important;
+}
+
+/* ========================================
+   АДАПТИВНОСТЬ
+   ======================================== */
+
+/* Tablet */
+@media (max-width: 992px) {
+    section.service {
+        padding: 80px 0 !important;
+    }
+    
+    section.cta {
+        padding: 80px 0 !important;
+    }
+    
+    section.service .service-item {
+        padding: 30px 25px 30px 90px !important;
+        min-height: 180px !important;
+    }
+    
+    section.service .service-item i {
+        left: 25px !important;
+        font-size: 40px !important;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    section.service {
+        padding: 60px 0 !important;
+    }
+    
+    section.cta {
+        padding: 60px 0 !important;
+    }
+    
+    footer.footer {
+        padding: 60px 0 30px !important;
+    }
+    
+    section.service .service-item {
+        padding: 25px 20px 25px 80px !important;
+        min-height: 160px !important;
+    }
+    
+    section.service .service-item i {
+        left: 20px !important;
+        font-size: 38px !important;
+        top: 30px !important;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+    section.service .service-item {
+        padding: 20px 15px 20px 70px !important;
+        min-height: auto !important;  /* На маленьких экранах высота авто */
+    }
+    
+    section.service .service-item i {
+        left: 15px !important;
+        font-size: 35px !important;
+        top: 25px !important;
+    }
+}

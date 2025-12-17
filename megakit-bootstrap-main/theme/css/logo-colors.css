@@ -1,0 +1,353 @@
+/* ===========================================
+   ЦВЕТОВАЯ СХЕМА В СТИЛЕ ЛОГОТИПА
+   Темно-синий (#0d4a6d) + Оранжевый (#c97234)
+   =========================================== */
+
+/* ===========================================
+   ОСНОВНЫЕ ЦВЕТА
+   =========================================== */
+
+/* Замена красного на оранжевый акцент */
+.bg-primary,
+.btn-main,
+.btn-small,
+.btn-transparent {
+  background: #c97234 !important;  /* Оранжевый из логотипа */
+}
+
+.btn-main:hover,
+.btn-small:hover,
+.btn-transparent:hover {
+  background: #b3612a !important;  /* Темнее при hover */
+  box-shadow: 0 10px 25px rgba(201, 114, 52, 0.3) !important;
+}
+
+.text-color,
+.color-one,
+.color-two,
+.color-three,
+.color-four {
+  color: #c97234 !important;  /* Оранжевый */
+}
+
+/* Кнопки с рамкой */
+.btn-solid-border {
+  border: 2px solid #c97234 !important;
+  color: #0d4a6d !important;
+}
+
+.btn-solid-border:hover {
+  border: 2px solid #c97234 !important;
+  background: #c97234 !important;
+  color: #fff !important;
+  box-shadow: 0 10px 25px rgba(201, 114, 52, 0.3) !important;
+}
+
+/* Прозрачные кнопки */
+.btn-transparent {
+  background: transparent !important;
+  color: #c97234 !important;
+}
+
+/* ===========================================
+   ССЫЛКИ И HOVER ЭФФЕКТЫ
+   =========================================== */
+
+a:focus,
+a:hover {
+  color: #c97234 !important;
+}
+
+/* Подчеркивание ссылок */
+#navbar .nav-link::after {
+  background: #c97234 !important;
+}
+
+/* Hover для элементов с цветом */
+.intro-item:hover i,
+.service-item:hover i,
+.service-item:hover h4 {
+  color: #c97234 !important;
+}
+
+/* Иконки */
+.address-block li i {
+  color: #c97234 !important;
+}
+
+.social-icons i:hover,
+.footer-socials li a:hover {
+  color: #c97234 !important;
+}
+
+/* ===========================================
+   ФОРМЫ И INPUTS
+   =========================================== */
+
+input[type=email]:focus,
+input[type=password]:focus,
+input[type=text]:focus,
+input[type=tel]:focus {
+  box-shadow: 0 0 0 3px rgba(201, 114, 52, 0.1) !important;
+  border: 1px solid #c97234 !important;
+}
+
+.form-control:focus {
+  box-shadow: 0 0 0 3px rgba(201, 114, 52, 0.1) !important;
+  border: 1px solid #c97234 !important;
+}
+
+.contact-form-wrap .form-group .form-control:focus,
+.contact-form-wrap .form-group-2 textarea:focus {
+  box-shadow: 0 0 0 3px rgba(201, 114, 52, 0.1) !important;
+  border: 1px solid #c97234 !important;
+}
+
+.comment-reply-form input:focus,
+.comment-reply-form textarea:focus {
+  box-shadow: 0 0 0 3px rgba(201, 114, 52, 0.1) !important;
+  border: 1px solid #c97234 !important;
+}
+
+/* ===========================================
+   ТЕГИ И PAGINATION
+   =========================================== */
+
+.tags a:hover,
+.widget.widget-tag ul li a:hover {
+  background: #c97234 !important;
+  border: 1px solid #c97234 !important;
+}
+
+.pagination .nav-links a:hover {
+  color: #c97234 !important;
+}
+
+/* ===========================================
+   БЛОГ И КОММЕНТАРИИ
+   =========================================== */
+
+.blog-item-content h3 a:hover {
+  color: #c97234 !important;
+}
+
+.post-comments .comment-author a,
+.comment-wrap .media .media-heading a {
+  color: #c97234 !important;
+}
+
+.post-comments .comment-button:hover {
+  color: #c97234 !important;
+}
+
+.post-excerpt blockquote.quote-post p {
+  color: #c97234 !important;
+}
+
+.next-prev a:hover {
+  color: #c97234 !important;
+}
+
+.social-profile ul li a:hover {
+  color: #c97234 !important;
+}
+
+.widget.widget-latest-post .media .media-heading a:hover,
+.widget.widget-category ul li a:hover {
+  color: #c97234 !important;
+}
+
+/* ===========================================
+   СПЕЦИАЛЬНЫЕ ЭЛЕМЕНТЫ
+   =========================================== */
+
+/* Scroll to top кнопка */
+.scroll-to-top {
+  background: #c97234 !important;
+  box-shadow: 0 5px 20px rgba(201, 114, 52, 0.4) !important;
+}
+
+.scroll-to-top:hover {
+  background: #0d4a6d !important;  /* Темно-синий при hover */
+  box-shadow: 0 10px 30px rgba(13, 74, 109, 0.3) !important;
+}
+
+/* Цитаты */
+h3.quote::before {
+  background: #c97234 !important;
+}
+
+/* Counter stats */
+.counter-item .counter-stat {
+  color: #c97234 !important;
+}
+
+/* Testimonials */
+.testimonial-item i {
+  color: #c97234 !important;
+}
+
+/* Portfolio overlay */
+.portflio-item .overlay-item {
+  color: #c97234 !important;
+}
+
+/* Footer ссылки */
+.footer .copyright a:hover {
+  color: #c97234 !important;
+}
+
+/* ===========================================
+   СЕКЦИИ И BACKGROUNDS
+   =========================================== */
+
+/* Субтитры */
+.subtitle {
+  color: #c97234 !important;
+}
+
+/* Text colors */
+.text-color2 {
+  color: #c97234 !important;
+}
+
+/* Section titles */
+.section-title .subtitle {
+  color: #c97234 !important;
+}
+
+/* ===========================================
+   АДАПТАЦИЯ ПОД ТЕМНО-СИНИЙ
+   =========================================== */
+
+/* Заголовки - темно-синий вместо черного */
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+  color: #0d4a6d !important;
+}
+
+/* Основной текст остается темно-серым для читаемости */
+body {
+  color: rgba(0, 0, 0, 0.75);
+}
+
+/* ===========================================
+   HOVER ЭФФЕКТЫ С ОРАНЖЕВЫМ
+   =========================================== */
+
+/* Карточки услуг */
+.service-item:hover {
+  box-shadow: 0 20px 50px rgba(201, 114, 52, 0.15) !important;
+}
+
+/* Intro items */
+.intro-item:hover {
+  box-shadow: 0 15px 40px rgba(201, 114, 52, 0.1) !important;
+}
+
+/* Team cards */
+.team-item:hover .team-img-hover {
+  background: rgba(201, 114, 52, 0.05) !important;
+}
+
+/* Blog items */
+.blog-item:hover {
+  box-shadow: 0 10px 30px rgba(201, 114, 52, 0.1) !important;
+}
+
+/* Testimonials */
+.testimonial-item:hover {
+  box-shadow: 0 15px 40px rgba(201, 114, 52, 0.1) !important;
+}
+
+/* Comment wrap */
+.comment-wrap:hover {
+  box-shadow: 0 5px 20px rgba(201, 114, 52, 0.1) !important;
+}
+
+/* ===========================================
+   АНИМАЦИИ И TRANSITIONS
+   =========================================== */
+
+/* Кнопки с анимацией */
+.btn::before {
+  background: rgba(255, 255, 255, 0.15) !important;
+}
+
+/* ===========================================
+   ГРАДИЕНТЫ (опционально)
+   =========================================== */
+
+.bg-gradient {
+  background-image: linear-gradient(145deg, rgba(13, 74, 109, 0.95) 0%, rgba(201, 114, 52, 0.95) 100%) !important;
+  background-repeat: repeat-x !important;
+}
+
+/* ===========================================
+   МЕДИА ЗАПРОСЫ
+   =========================================== */
+
+@media (max-width: 992px) {
+  /* Мобильное меню */
+  .navbar-collapse {
+    border-top: 1px solid rgba(201, 114, 52, 0.2) !important;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Адаптация для планшетов */
+  .btn-main:hover,
+  .btn-solid-border:hover {
+    transform: translateY(-2px) !important;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Адаптация для мобильных */
+  .scroll-to-top {
+    box-shadow: 0 3px 15px rgba(201, 114, 52, 0.4) !important;
+  }
+}
+
+/* ===========================================
+   ВАЖНЫЕ OVERRIDE
+   =========================================== */
+
+/* Убедимся что наши цвета применяются */
+*[class*="color-"] {
+  color: #c97234 !important;
+}
+
+*[class*="bg-primary"] {
+  background: #c97234 !important;
+}
+
+/* ===========================================
+   ДОПОЛНИТЕЛЬНЫЕ СТИЛИ
+   =========================================== */
+
+/* Contact info hover */
+.contact-info p:hover {
+  color: #c97234 !important;
+}
+
+/* Header top email hover */
+.header-top .header-top-info a:hover,
+.header-top .header-top-info a:hover span {
+  color: #c97234 !important;
+}
+
+/* Pricing hover */
+.pricing .btn-solid-border:hover {
+  border-color: #c97234 !important;
+  background: #c97234 !important;
+}
+
+/* Team social links */
+.team-img-hover .team-social li a:hover {
+  background: #c97234 !important;
+  border-color: #c97234 !important;
+}
+
+/* ===========================================
+   КОНЕЦ ФАЙЛА
+   =========================================== */

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 80">
+  <!-- Простая версия логотипа только с формами -->
+  
+  <!-- M -->
+  <rect x="10" y="10" width="8" height="60" fill="#0d4a6d"/>
+  <rect x="18" y="10" width="6" height="30" fill="#0d4a6d"/>
+  <rect x="24" y="10" width="6" height="30" fill="#0d4a6d"/>
+  <rect x="30" y="10" width="8" height="60" fill="#0d4a6d"/>
+  
+  <!-- Рамка для 'a' -->
+  <rect x="50" y="15" width="50" height="50" rx="8" ry="8" fill="none" stroke="#0d4a6d" stroke-width="3"/>
+  
+  <!-- 'a' внутри -->
+  <circle cx="75" cy="40" r="12" fill="#c97234"/>
+  <rect x="85" y="28" width="8" height="24" fill="#c97234"/>
+  
+  <!-- NDRIL как прямоугольники -->
+  <rect x="115" y="10" width="8" height="60" fill="#0d4a6d"/>
+  <rect x="123" y="10" width="15" height="8" fill="#0d4a6d"/>
+  <rect x="138" y="10" width="8" height="60" fill="#0d4a6d"/>
+  
+  <rect x="155" y="10" width="8" height="60" fill="#0d4a6d"/>
+  <path d="M163,10 Q173,10 173,25 Q173,40 163,40 L155,40" fill="none" stroke="#0d4a6d" stroke-width="8"/>
+  
+  <rect x="180" y="10" width="8" height="60" fill="#0d4a6d"/>
+  <path d="M188,10 Q198,10 198,25 L208,60" fill="none" stroke="#0d4a6d" stroke-width="8"/>
+  
+  <rect x="215" y="10" width="8" height="60" fill="#0d4a6d"/>
+  
+  <rect x="230" y="10" width="8" height="60" fill="#0d4a6d"/>
+  <rect x="238" y="62" width="25" height="8" fill="#0d4a6d"/>
+</svg>

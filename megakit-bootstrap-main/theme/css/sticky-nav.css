@@ -1,0 +1,280 @@
+/* ===========================================
+   FIXED NAVIGATION - В СТИЛЕ ЛОГОТИПА!
+   =========================================== */
+
+.navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1000;
+  background: #ffffff !important;  /* ← БЕЛЫЙ ФОН */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  perspective: 1000;
+}
+
+/* Header top - белый фон */
+.header-top {
+  background: #ffffff !important;
+  border-bottom: 1px solid rgba(13, 74, 109, 0.1) !important;
+  transition: transform 0.3s ease, opacity 0.3s ease, height 0.3s ease;
+  overflow: hidden;
+}
+
+/* Цвета текста в header-top */
+.header-top .header-top-info {
+  color: #0d4a6d !important;
+}
+
+.header-top .header-top-info a {
+  color: #0d4a6d !important;
+}
+
+.header-top .header-top-info a:hover {
+  color: #c97234 !important;
+}
+
+.header-top .header-top-info span {
+  color: #0d4a6d !important;
+}
+
+/* Кнопки переключения языка */
+.lang-btn {
+  background-color: transparent !important;
+  color: #0d4a6d !important;
+  border: 1px solid rgba(13, 74, 109, 0.3) !important;
+}
+
+.lang-btn:hover {
+  background-color: rgba(201, 114, 52, 0.1) !important;
+  border-color: #c97234 !important;
+  color: #c97234 !important;
+}
+
+.lang-btn.active {
+  background-color: #c97234 !important;
+  color: #fff !important;
+  border-color: #c97234 !important;
+}
+
+.navigation.header-scrolled .header-top {
+  transform: translateY(-100%);
+  opacity: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  pointer-events: none;
+}
+
+/* Navbar - белый фон */
+#navbar {
+  background: #ffffff !important;
+  box-shadow: none !important;
+}
+
+#navbar.scrolled {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15) !important;
+  background: rgba(255, 255, 255, 0.98) !important;
+}
+
+/* Ссылки навигации - темно-синий */
+#navbar .nav-link {
+  color: #0d4a6d !important;
+  font-weight: 600 !important;
+  position: relative;
+  transition: color 0.3s ease;
+  padding-bottom: 10px !important;
+}
+
+#navbar .nav-link:hover,
+#navbar .nav-link:focus {
+  color: #c97234 !important;
+}
+
+/* Активный пункт меню */
+#navbar .nav-item.active .nav-link {
+  color: #c97234 !important;
+}
+
+/* Подчеркивание активного пункта - С ПРИОРИТЕТОМ! */
+#navbar .nav-link::after {
+  content: '' !important;
+  position: absolute !important;
+  bottom: 0 !important;
+  left: 50% !important;
+  width: 0 !important;
+  height: 2px !important;
+  background: #c97234 !important;
+  transition: all 0.3s ease !important;
+  transform: translateX(-50%) !important;
+}
+
+#navbar .nav-item.active .nav-link::after,
+#navbar .nav-link:hover::after {
+  width: 80% !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+}
+
+/* Hamburger menu кнопка - темно-синий */
+.navbar-toggler {
+  color: #0d4a6d !important;
+  border-color: rgba(13, 74, 109, 0.3) !important;
+}
+
+.navbar-toggler .fa-bars {
+  color: #0d4a6d !important;
+}
+
+body {
+  padding-top: 0;
+}
+
+/* Отступ для hero секции */
+.slider {
+  padding-top: 200px !important;
+}
+
+@media (max-width: 768px) {
+  .slider {
+    padding-top: 180px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .slider {
+    padding-top: 160px !important;
+  }
+}
+
+/* Scroll margins */
+section {
+  scroll-margin-top: 100px;
+}
+
+#home {
+  scroll-margin-top: 0;
+}
+
+#despre, #servicii, #geismar, #contact {
+  scroll-margin-top: 100px;
+}
+
+/* ===========================================
+   LOGO STYLES - УВЕЛИЧЕННЫЙ И ЦВЕТНОЙ
+   =========================================== */
+
+/* Logo in navbar - УВЕЛИЧЕН И ЦВЕТНОЙ */
+.navbar-brand .logo-img {
+  height: 55px !important;
+  width: auto !important;
+  max-width: 280px !important;
+  display: block !important;
+  transition: all 0.3s ease;
+  filter: none !important;
+  -webkit-filter: none !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.navbar-brand {
+  display: inline-block !important;
+  padding: 0 !important;
+}
+
+.navbar-brand:hover .logo-img {
+  transform: scale(1.05);
+  opacity: 1 !important;
+}
+
+/* Logo in footer - УВЕЛИЧЕН */
+.footer-logo {
+  height: 60px !important;
+  width: auto !important;
+  max-width: 300px !important;
+  display: block !important;
+  transition: all 0.3s ease;
+  filter: none !important;
+  -webkit-filter: none !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.footer .widget .logo {
+  display: inline-block !important;
+}
+
+.footer .widget .logo:hover .footer-logo {
+  transform: scale(1.05);
+  opacity: 1 !important;
+}
+
+/* Responsive logo sizes */
+@media (max-width: 768px) {
+  .navbar-brand .logo-img {
+    height: 45px !important;
+    max-width: 240px;
+  }
+  
+  .footer-logo {
+    height: 50px !important;
+    max-width: 260px;
+  }
+  
+  section {
+    scroll-margin-top: 90px;
+  }
+  
+  #despre, #servicii, #geismar, #contact {
+    scroll-margin-top: 90px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-brand .logo-img {
+    height: 38px !important;
+    max-width: 200px;
+  }
+  
+  .footer-logo {
+    height: 45px !important;
+    max-width: 220px;
+  }
+  
+  section {
+    scroll-margin-top: 80px;
+  }
+  
+  #despre, #servicii, #geismar, #contact {
+    scroll-margin-top: 80px;
+  }
+}
+
+/* ===========================================
+   MOBILE MENU - БЕЛЫЙ ФОН
+   =========================================== */
+
+@media (max-width: 992px) {
+  .navbar-collapse {
+    background: #ffffff !important;
+    padding: 20px;
+    border-top: 1px solid rgba(13, 74, 109, 0.1);
+    margin-top: 10px;
+  }
+  
+  #navbar .nav-link {
+    padding: 10px 0 !important;
+    border-bottom: 1px solid rgba(13, 74, 109, 0.05);
+  }
+  
+  #navbar .nav-link:last-child {
+    border-bottom: none;
+  }
+}

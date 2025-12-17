@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>БЫСТРАЯ ПРОВЕРКА - Mandril</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; }
+        
+        /* МЕНЮ */
+        .header { 
+            background: #222; 
+            color: white; 
+            padding: 20px; 
+            position: fixed; 
+            top: 0; 
+            width: 100%; 
+            z-index: 999;
+        }
+        
+        /* СЕКЦИИ */
+        section { 
+            min-height: 100vh; 
+            padding: 120px 20px 20px; 
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        
+        #home { background: #667eea; color: white; }
+        #despre { background: #f093fb; color: white; }
+        #servicii { background: #4facfe; color: white; }
+        #geismar { background: #43e97b; color: white; }
+        #contact { background: #fa709a; color: white; }
+        
+        h1 { font-size: 60px; margin-bottom: 20px; }
+        p { font-size: 20px; }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h2>МЕНЮ: 
+        <a href="#home" style="color:#fff; margin: 0 10px;">Home</a> |
+        <a href="#despre" style="color:#fff; margin: 0 10px;">Despre</a> |
+        <a href="#servicii" style="color:#fff; margin: 0 10px;">Servicii</a> |
+        <a href="#geismar" style="color:#fff; margin: 0 10px;">Geismar</a> |
+        <a href="#contact" style="color:#fff; margin: 0 10px;">Contact</a>
+    </h2>
+</div>
+
+<section id="home">
+    <div>
+        <h1>СЕКЦИЯ 1: HOME</h1>
+        <p>Если вы видите это - секция работает!</p>
+        <p>Прокрутите вниз ⬇️</p>
+    </div>
+</section>
+
+<section id="despre">
+    <div>
+        <h1>СЕКЦИЯ 2: DESPRE</h1>
+        <p>✅ Если вы видите это - секция НА МЕСТЕ!</p>
+        <p>Прокрутите дальше ⬇️</p>
+    </div>
+</section>
+
+<section id="servicii">
+    <div>
+        <h1>СЕКЦИЯ 3: SERVICII</h1>
+        <p>✅ Если вы видите это - секция НА МЕСТЕ!</p>
+        <p>Прокрутите дальше ⬇️</p>
+    </div>
+</section>
+
+<section id="geismar">
+    <div>
+        <h1>СЕКЦИЯ 4: GEISMAR</h1>
+        <p>✅ Если вы видите это - секция НА МЕСТЕ!</p>
+        <p>Прокрутите дальше ⬇️</p>
+    </div>
+</section>
+
+<section id="contact">
+    <div>
+        <h1>СЕКЦИЯ 5: CONTACT</h1>
+        <p>✅ ВСЕ 5 СЕКЦИЙ РАБОТАЮТ!</p>
+        <p>Проблема НЕ в HTML!</p>
+    </div>
+</section>
+
+<script>
+    // Плавная прокрутка
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            const headerHeight = 70;
+            const targetPosition = target.offsetTop - headerHeight;
+            window.scrollTo({
+                top: targetPosition,
+                behavior: 'smooth'
+            });
+        });
+    });
+    
+    console.log('✅ Тест страница загружена!');
+    console.log('📊 Секций найдено:', document.querySelectorAll('section').length);
+</script>
+
+</body>
+</html>

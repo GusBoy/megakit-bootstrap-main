@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="utf-8">
+  <title>Тест Анимаций</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; }
+    
+    .section { 
+      min-height: 100vh; 
+      padding: 100px 20px; 
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .section:nth-child(odd) { background: #f5f5f5; }
+    .section:nth-child(even) { background: #fff; }
+    
+    h1 { font-size: 48px; margin-bottom: 20px; }
+    
+    /* Анимации */
+    .fade-in-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    
+    .fade-in-up.animated {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    .scale-in {
+      opacity: 0;
+      transform: scale(0.9);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    
+    .scale-in.animated {
+      opacity: 1;
+      transform: scale(1);
+    }
+    
+    .geismar-animate {
+      opacity: 0;
+      transform: translateX(100px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    
+    .geismar-animate.animate-in {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    
+    .box {
+      padding: 50px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<div class="section">
+  <div class="box">
+    <h1>Прокрутите вниз 👇</h1>
+    <p>Чтобы увидеть анимации</p>
+  </div>
+</div>
+
+<div class="section">
+  <div class="box fade-in-up">
+    <h1>Секция 1</h1>
+    <p>Fade In Up</p>
+    <p>Выезд снизу</p>
+  </div>
+</div>
+
+<div class="section">
+  <div class="box scale-in">
+    <h1>Секция 2</h1>
+    <p>Scale In</p>
+    <p>Увеличение</p>
+  </div>
+</div>
+
+<div class="section">
+  <div class="box geismar-animate">
+    <h1>Секция 3 (Geismar)</h1>
+    <p>Slide In Right</p>
+    <p>Выезд справа</p>
+  </div>
+</div>
+
+<div class="section">
+  <div class="box fade-in-up">
+    <h1>Секция 4</h1>
+    <p>Fade In Up</p>
+    <p>Выезд снизу</p>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+(function ($) {
+	'use strict';
+
+	function checkAnimations() {
+		var windowHeight = $(window).height();
+		var scrollTop = $(window).scrollTop();
+		
+		$('.geismar-animate, .fade-in-up, .scale-in').each(function() {
+			var $element = $(this);
+			
+			if ($element.hasClass('animate-in') || $element.hasClass('animated')) {
+				return;
+			}
+			
+			var elementTop = $element.offset().top;
+			var elementVisible = scrollTop + windowHeight - 150;
+			
+			if (elementVisible > elementTop) {
+				if ($element.hasClass('geismar-animate')) {
+					$element.addClass('animate-in');
+					console.log('✅ Geismar анимирован!');
+				} else {
+					$element.addClass('animated');
+					console.log('✅ Элемент анимирован');
+				}
+			}
+		});
+	}
+
+	$(window).on('scroll', checkAnimations);
+	$(document).ready(function() {
+		console.log('🚀 Тест анимаций загружен!');
+		checkAnimations();
+		
+		console.log('📊 Элементов:');
+		console.log('   - Geismar:', $('.geismar-animate').length);
+		console.log('   - Fade-in-up:', $('.fade-in-up').length);
+		console.log('   - Scale-in:', $('.scale-in').length);
+	});
+
+})(jQuery);
+</script>
+
+</body>
+</html>

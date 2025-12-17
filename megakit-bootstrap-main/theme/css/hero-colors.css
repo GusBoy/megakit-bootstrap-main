@@ -1,0 +1,41 @@
+/* ========================================
+   ИЗМЕНЕНИЕ ЦВЕТОВ HERO СЕКЦИИ
+   Заголовок: Оранжевый | Кнопка: Синяя | Подзаголовок: Белый
+   ======================================== */
+
+/* Заголовок Hero - ОРАНЖЕВЫЙ */
+.slider .block h1 {
+    color: #c97234 !important;  /* Оранжевый */
+}
+
+/* Подзаголовок Hero - БЕЛЫЙ (оставляем как было) */
+.slider .block span {
+    color: #ffffff !important;  /* Белый */
+}
+
+/* Кнопка Hero - СИНЯЯ */
+.slider .block .btn,
+.slider .btn-main {
+    background: #0d4a6d !important;  /* Темно-синий */
+    border-color: #0d4a6d !important;
+    color: #ffffff !important;
+}
+
+/* Кнопка Hero при hover - светлее синий */
+.slider .block .btn:hover,
+.slider .btn-main:hover {
+    background: #1e6a94 !important;  /* Светлее синий */
+    border-color: #1e6a94 !important;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(13, 74, 109, 0.4) !important;  /* Синяя тень */
+}
+
+/* Убираем оранжевое свечение у кнопки в Hero */
+.slider .btn-main:hover {
+    box-shadow: 0 10px 30px rgba(13, 74, 109, 0.4) !important;
+}
+
+/* Анимация для текста */
+.slider .block h1 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);  /* Тень для лучшей читаемости */
+}
